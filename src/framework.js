@@ -19,6 +19,8 @@ const colors = {
     green: "#080",
     blue: "#0000ff",
     black: "#000000",
+    pink: "#ff1080",
+    purple: "#c244fc"
 }
 
 // フォントサイズの定義
