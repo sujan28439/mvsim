@@ -1,0 +1,10 @@
+# IDE
+*.vscode
+*.idea
+
+# OS
+*desktop.ini
+*.DS_Store
+
+# Logs
+*.log
