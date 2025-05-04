@@ -108,10 +108,10 @@ class PageMain extends Page {
         this.button2.create("乗換案内から購入", "250px", "95px", "330px", "105px", fontsize.medium);
         this.button3.create("自由席", "250px", "95px", "60px", "215px", fontsize.large);
         this.button4.create("乗車券", "250px", "95px", "330px", "215px", fontsize.large);
-        this.button5.create("定期券", "250px", "50px", "60px", "325px", fontsize.medium);
+        this.button5.create("定期券", "250px", "50px", "60px", "325px", fontsize.medium, colors.pink);
         this.button6.create("インターネット予約の受取り", "250px", "50px", "330px", "325px", fontsize.small, colors.green);
-        this.button7.create("払いもどし", "250px", "50px", "60px", "385px", fontsize.medium);
-        this.button8.create("QRコード読取り", "250px", "50px", "330px", "385px", fontsize.medium);
+        this.button7.create("払いもどし", "250px", "50px", "60px", "385px", fontsize.medium, colors.purple);
+        this.button8.create("QRコード読取り", "250px", "50px", "330px", "385px", fontsize.medium, colors.blue);
 
         this.button1.onclick(() => {
             pageman.changePage(1);
@@ -153,8 +153,8 @@ class Page1 extends Page {
     create() {
         this.textTitle1.create("きっぷの種類", "50px", "0px", fontsize.large, colors.yellow);
         this.textTitle2.create("をお選びください", "230px", "23px", fontsize.medium, colors.textWhite);
-        this.button1.create("新幹線 指定席", "250px", "70px", "60px", "100px", fontsize.large);
-        this.button2.create("在来線 指定席", "250px", "70px", "330px", "100px", fontsize.large);
+        this.button1.create("新幹線 指定席", "250px", "70px", "60px", "110px", fontsize.large);
+        this.button2.create("在来線 指定席", "250px", "70px", "330px", "110px", fontsize.large);
         this.buttonBack.create("前画面に戻る", "90px", "30px", "100px", "478px", fontsize.small, colors.orange);
 
         this.buttonBack.onclick(() => {
