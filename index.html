@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マルス券売機シミュレータ</title>
+</head>
+<body>
+    <header>
+        <h1>マルス券売機シミュレータ</h1>
+        <p>
+            MV50型端末をイメージしたマルス券売機シムです。MV50は首都圏では「指定席券売機」、それ以外では「みどりの券売機」として知られています。
+        </p>
+        <select name="sel_station" id="sel_station">
+            <option value="ﾄｳ">東京</option>
+        </select>駅
+    </header>
+    <button id="btn_reset">とりけし</button>
+    <button id="btn_call">よびだし</button>
+    <div id="display"></div>
+    <footer style="text-align: center;">
+        <button onclick="window.open('guide.html', 'MVSIM Guide', 'popup')">ガイドを開く</button>
+        <h3>MVSIM</h3>
+        <p id="version"></p>
+        <p>License: <a href="LICENSE" target="_blank" rel="noopener noreferrer">MIT</a></p>
+        <p>Github: <a href="https://github.com/sujan28439/mvsim" target="_blank" rel="noopener noreferrer">https://github.com/sujan28439/mvsim</a></p>
+    </footer>
+    <script src="src/main.js"></script>
+    <script src="src/framework.js"></script>
+    <script src="src/page.js"></script>
+</body>
+</html>
