@@ -67,7 +67,11 @@ class PageManager {
         this.pages.push(page);
     }
 
-    changePage(index) {
+    getIndex(pagename) {
+        return this.pages.findIndex((element) => element.name === pagename);
+    }
+
+    changePageByIndex(index) {
         if (this.currentPage < 0) {
             if (this.pages.length < 1) return;
         } else this.pages[this.currentPage].destroy();
@@ -75,13 +79,7 @@ class PageManager {
         this.pages[this.currentPage].create();
     }
 
-    /*
-    getIndex(pagename) {
-        this.pages.forEach((page, index) => {
-            if (page.name == pagename) {
-                return index;
-            }
-        });
+    changePageByName(pagename) {
+        this.changePageByIndex(this.getIndex(pagename));
     }
-    */
 }

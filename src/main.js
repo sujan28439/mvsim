@@ -47,7 +47,7 @@ function main() {
     pageman.addPage(subpage1);
     time.create();
 
-    pageman.changePage(0);
+    pageman.changePageByName("top");
 }
 
 document.getElementById("btn_reset").addEventListener("click", () => {

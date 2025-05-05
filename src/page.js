@@ -114,7 +114,7 @@ class PageMain extends Page {
         this.button8.create("QRコード読取り", "250px", "50px", "330px", "385px", fontsize.medium, colors.blue);
 
         this.button1.onclick(() => {
-            pageman.changePage(1);
+            pageman.changePageByName("sub1");
         });
         this.button2.onclick(() => {unsupport();});
         this.button3.onclick(() => {unsupport();});
@@ -142,7 +142,7 @@ class PageMain extends Page {
 class Page1 extends Page {
     constructor() {
         super();
-        this.name = "1";
+        this.name = "sub1";
         this.textTitle1 = new Text();
         this.textTitle2 = new Text();
         this.button1 = new Button();
@@ -158,7 +158,7 @@ class Page1 extends Page {
         this.buttonBack.create("前画面に戻る", "90px", "30px", "100px", "478px", fontsize.small, colors.orange);
 
         this.buttonBack.onclick(() => {
-            pageman.changePage(0);
+            pageman.changePageByName("top");
         });
     }
 
