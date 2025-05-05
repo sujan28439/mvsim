@@ -157,6 +157,14 @@ class Page1 extends Page {
         this.button2.create("在来線 指定席", "250px", "70px", "330px", "110px", fontsize.large);
         this.buttonBack.create("前画面に戻る", "90px", "30px", "100px", "478px", fontsize.small, colors.orange);
 
+        this.button1.onclick(() => {
+            unsupport();
+        });
+
+        this.button2.onclick(() => {
+            unsupport();
+        });
+
         this.buttonBack.onclick(() => {
             pageman.changePageByName("top");
         });
