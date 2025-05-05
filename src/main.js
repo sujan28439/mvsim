@@ -42,11 +42,14 @@ function main() {
     const toppage = new PageMain();
     const subpage1 = new Page1();
     const subpage1_1 = new Page1_1();
+    const subpage1_1_1 = new Page1_1_1();
+
     const time = new Time();
 
     pageman.addPage(toppage);
     pageman.addPage(subpage1);
     pageman.addPage(subpage1_1);
+    pageman.addPage(subpage1_1_1);
     time.create();
 
     pageman.changePageByName("top");

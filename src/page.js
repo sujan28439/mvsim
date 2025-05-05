@@ -200,7 +200,7 @@ class Page1_1 extends Page {
         this.buttonBack.create("前画面に戻る", "90px", "30px", "100px", "478px", fontsize.small, colors.orange);
 
         this.button1.onclick(() => {
-            unsupport();
+            pageman.changePageByName("sub1-1-1");
         });
 
         this.button2.onclick(() => {
@@ -222,6 +222,49 @@ class Page1_1 extends Page {
         this.button1.destroy();
         this.button2.destroy();
         this.button3.destroy();
+        this.buttonBack.destroy();
+    }
+}
+
+class Page1_1_1 extends Page {
+    constructor() {
+        super();
+        this.name = "sub1-1-1";
+        this.textTitle1 = new Text();
+        this.textTitle2 = new Text();
+        this.textTitle3 = new Text();
+        this.button1 = new Button();
+        this.button2 = new Button();
+        this.buttonBack = new Button();
+    }
+
+    create() {
+        this.textTitle1.create("新幹線に", "50px", "23px", fontsize.medium, colors.textWhite);
+        this.textTitle2.create("お乗りになる駅", "130px", "0px", fontsize.large, colors.yellow);
+        this.textTitle3.create("をお選びください", "340px", "23px", fontsize.medium, colors.textWhite);
+        this.button1.create("東京 から", "560px", "100px", "40px", "200px", fontsize.large);
+        this.button2.create("他の駅から", "200px", "40px", "40px", "340px", fontsize.medium);
+        this.buttonBack.create("前画面に戻る", "90px", "30px", "100px", "478px", fontsize.small, colors.orange);
+
+        this.button1.onclick(() => {
+            unsupport();
+        });
+
+        this.button2.onclick(() => {
+            unsupport();
+        });
+
+        this.buttonBack.onclick(() => {
+            pageman.changePageByName("sub1-1");
+        });
+    }
+
+    destroy() {
+        this.textTitle1.destroy();
+        this.textTitle2.destroy();
+        this.textTitle3.destroy();
+        this.button1.destroy();
+        this.button2.destroy();
         this.buttonBack.destroy();
     }
 }
