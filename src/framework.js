@@ -61,6 +61,8 @@ class PageManager {
     constructor() {
         this.pages = [];
         this.currentPage = -1;
+        this.pathPage = [];
+        this.isAddPath = true;
     }
 
     addPage(page) {
@@ -75,11 +77,18 @@ class PageManager {
         if (this.currentPage < 0) {
             if (this.pages.length < 1) return;
         } else this.pages[this.currentPage].destroy();
+        if (this.isAddPath) this.pathPage.push(this.currentPage);
         this.currentPage = index;
         this.pages[this.currentPage].create();
     }
 
     changePageByName(pagename) {
         this.changePageByIndex(this.getIndex(pagename));
+    }
+
+    changesPreviousPage() {
+        this.isAddPath = false;
+        this.changePageByIndex(this.pathPage.pop());
+        this.isAddPath = true;
     }
 }

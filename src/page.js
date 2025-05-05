@@ -166,7 +166,7 @@ class Page1 extends Page {
         });
 
         this.buttonBack.onclick(() => {
-            pageman.changePageByName("top");
+            pageman.changesPreviousPage();
         });
     }
 
@@ -212,7 +212,7 @@ class Page1_1 extends Page {
         });
 
         this.buttonBack.onclick(() => {
-            pageman.changePageByName("sub1");
+            pageman.changesPreviousPage();
         });
     }
 
@@ -255,7 +255,7 @@ class Page1_1_1 extends Page {
         });
 
         this.buttonBack.onclick(() => {
-            pageman.changePageByName("sub1-1");
+            pageman.changesPreviousPage();
         });
     }
 
