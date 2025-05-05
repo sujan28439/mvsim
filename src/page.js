@@ -153,8 +153,8 @@ class Page1 extends Page {
     create() {
         this.textTitle1.create("きっぷの種類", "50px", "0px", fontsize.large, colors.yellow);
         this.textTitle2.create("をお選びください", "230px", "23px", fontsize.medium, colors.textWhite);
-        this.button1.create("新幹線 指定席", "250px", "70px", "60px", "110px", fontsize.large);
-        this.button2.create("在来線 指定席", "250px", "70px", "330px", "110px", fontsize.large);
+        this.button1.create("新幹線 指定席", "250px", "70px", "60px", "110px", fontsize.medium);
+        this.button2.create("在来線 指定席", "250px", "70px", "330px", "110px", fontsize.medium);
         this.buttonBack.create("前画面に戻る", "90px", "30px", "100px", "478px", fontsize.small, colors.orange);
 
         this.button1.onclick(() => {
