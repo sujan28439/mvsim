@@ -92,3 +92,5 @@ class PageManager {
         this.isAddPath = true;
     }
 }
+
+let pageman = new PageManager();

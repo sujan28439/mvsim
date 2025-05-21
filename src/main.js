@@ -6,9 +6,6 @@
 // バージョン
 const VERSION = "dev";
 
-// ページマネージャのインスタンスはpage.jsで使うためグローバルにする
-let pageman;
-
 // リファクタリング後削除予定
 function createBackground(color, width, height, x, y) {
     const background = document.createElement("div");
@@ -23,8 +20,6 @@ function createBackground(color, width, height, x, y) {
 }
 
 function init() {
-    pageman = new PageManager();
-
     display.style.backgroundColor = colors.bgGray;
     display.style.width = 640 + "px";
     display.style.height = 512 + "px";
