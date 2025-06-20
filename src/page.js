@@ -162,7 +162,7 @@ class Page1 extends Page {
         });
 
         this.button2.onclick(() => {
-            unsupport();
+            pageman.changePageByName("sub1-2");
         });
 
         this.buttonBack.onclick(() => {
@@ -204,11 +204,11 @@ class Page1_1 extends Page {
         });
 
         this.button2.onclick(() => {
-            unsupport();
+            pageman.changePageByName("sub1-1-1");
         });
 
         this.button3.onclick(() => {
-            unsupport();
+            pageman.changePageByName("sub1-1-1");
         });
 
         this.buttonBack.onclick(() => {
@@ -265,6 +265,53 @@ class Page1_1_1 extends Page {
         this.textTitle3.destroy();
         this.button1.destroy();
         this.button2.destroy();
+        this.buttonBack.destroy();
+    }
+}
+
+class Page1_2 extends Page {
+    constructor() {
+        super();
+        this.name = "sub1-2";
+        this.textTitle1 = new Text();
+        this.textTitle2 = new Text();
+        this.button1 = new Button();
+        this.button2 = new Button();
+        this.button3 = new Button();
+        this.buttonBack = new Button();
+    }
+
+    create() {
+        this.textTitle1.create("お乗りになる列車", "50px", "0px", fontsize.large, colors.yellow);
+        this.textTitle2.create("をお選びください", "320px", "23px", fontsize.medium, colors.textWhite);
+        this.button1.create("特急踊り子・湘南", "200px", "70px", "10px", "230px", fontsize.medium);
+        this.button2.create("特急ひたち・ときわ", "200px", "70px", "220px", "230px", fontsize.medium);
+        this.button3.create("特急あずさ・かいじ", "200px", "70px", "430px", "230px", fontsize.medium);
+        this.buttonBack.create("前画面に戻る", "90px", "30px", "100px", "478px", fontsize.small, colors.orange);
+
+        this.button1.onclick(() => {
+            pageman.changePageByName("sub1-1-1");
+        });
+
+        this.button2.onclick(() => {
+            unsupport();
+        });
+
+        this.button3.onclick(() => {
+            unsupport();
+        });
+
+        this.buttonBack.onclick(() => {
+            pageman.changesPreviousPage();
+        });
+    }
+
+    destroy() {
+        this.textTitle1.destroy();
+        this.textTitle2.destroy();
+        this.button1.destroy();
+        this.button2.destroy();
+        this.button3.destroy();
         this.buttonBack.destroy();
     }
 }
